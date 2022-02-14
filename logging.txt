@@ -1,0 +1,94 @@
+Request method:	POST
+Request URI:	https://api-demo.airwallex.com/api/v1/beneficiaries/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiODVhYjZlMC1kYjZhLTQyYzktYjdiNy05MzI4YWNjNWFmZDQiLCJzdWIiOiIyODk2ZWJmZC03YjM5LTRjYjktYTE2My00ZGM5NTkyOGI3MzUiLCJpYXQiOjE2NDQ4NTU4NTgsImV4cCI6MTY0NDg2Nzg1OCwiYWNjb3VudF9pZCI6IjIyNTQ4MzkyLTM4Y2MtNDFiNy04YjFiLWM1YWNjZDAzNzJhOCIsImRhdGFfY2VudGVyX3JlZ2lvbiI6IkhLIiwidHlwZSI6ImNsaWVudCIsImRjIjoiSEsiLCJpc3NkYyI6IlVTIn0.OILDiWo-Lk8dkZC89QY5zv-YKlLguk97rQR8IJxJpDc
+				Accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "beneficiary": {
+        "additional_info": {
+            "personal_email": "radwa@gmail.com"
+        },
+        "address": {
+            "city": "Seattle",
+            "country_code": "US",
+            "postcode": "98104",
+            "state": "Washington",
+            "street_address": "412 5th Avenue"
+        },
+        "bank_details": {
+            "account_currency": "USD",
+            "account_name": "radwa Khalil",
+            "account_number": "50001121",
+            "account_routing_type1": "aba",
+            "bank_country_code": "US",
+            "bank_name": "JP Morgan Chase Bank",
+            "swift_code": "CHASUS33"
+        },
+        "company_name": "ABC University",
+        "entity_type": "COMPANY"
+    },
+    "nickname": "radwa",
+    "payer_entity_type": "PERSONAL",
+    "payment_methods": [
+        "SWIFT"
+    ]
+}
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 599
+Date: Mon, 14 Feb 2022 16:24:28 GMT
+Correlation-Id: bd166e4f4ff3c32e6de5ebcf0f07c527
+x-awx-trace-id: bd166e4f4ff3c32e6de5ebcf0f07c527
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+Server: APISIX
+X-B3-TraceId: bd166e4f4ff3c32e6de5ebcf0f07c527
+Via: 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{
+    "beneficiary": {
+        "additional_info": {
+            "personal_email": "radwa@gmail.com"
+        },
+        "address": {
+            "city": "Seattle",
+            "country_code": "US",
+            "postcode": "98104",
+            "state": "Washington",
+            "street_address": "412 5th Avenue"
+        },
+        "bank_details": {
+            "account_currency": "USD",
+            "account_name": "radwa Khalil",
+            "account_number": "50001121",
+            "account_routing_type1": "aba",
+            "bank_country_code": "US",
+            "bank_name": "JP Morgan Chase Bank",
+            "swift_code": "CHASUS33"
+        },
+        "company_name": "ABC University",
+        "entity_type": "COMPANY"
+    },
+    "beneficiary_id": "371a824e-fc6a-4ac0-94c2-882b5227bb91",
+    "nickname": "radwa",
+    "payer_entity_type": "PERSONAL",
+    "payment_methods": [
+        "SWIFT"
+    ]
+}

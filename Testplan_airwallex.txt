@@ -1,0 +1,73 @@
+Scope:
+
+Create API Framework for API service endpoint to create beneficiary.
+
+Requirments :
+
+1#Setup API Test framework using any language you are familiar with 
+2#Write automated api tests to verify the new endpoint is working as expected
+3#Focus on functional testing only, both positive and negative tests
+4#Document any defects/issues found, and include all necessary info for Dev to reproduce and fix the issue (in Word or other type of file
+you think appropriate)
+5#Submit your project via Github or zipped file and include README file for setup and executing tests
+6#Tests should be able to run from command line, so it's easy for CI integration
+7#The tests will run in different environments, so make the endpoint url configurable, make sure include instruction in README for the
+usage
+
+
+Positive;
+1: Test Case for Creating beneficiary with the required mandatory fields, should succeed with status code 200
+
+Negative;
+2: Test Case for Creating beneficiary without payment method
+
+3: Test Case for Creating beneficiary entering wrong payment method
+
+4: Test case for creating beneficiary entering wrong bank country code
+
+5: Test case for creating beneficiary entering account name less than 2
+
+6: Test case for creating beneficiary entering account name more than 10 characters
+
+7: Test case for creating beneficiary for US entering account number 0 Characters and more than 17 character long
+
+8: Test case for creating beneficiary for US entering account number more than 17 character long
+
+9: Test case for creating beneficiary for AU entering account number less than 6
+
+10: Test case for creating beneficiary for AU entering account number more than 9
+
+11: Test case for creating beneficiary for CN entering account number less than 8
+
+12: Test case for creating beneficiary for CN entering account number more than 20
+
+13: Test case for creating beneficiary entering wrong Swift code
+
+14: Test case for creating beneficiary entering Swift code less than 8 characters
+
+15: Test case for creating beneficiary entering Swift code more than 11 characters
+
+16: Test case for creating beneficiary entering bsb for US
+
+17: Test case for creating beneficiary entering bsb for CN
+
+18: Test case for creating beneficiary entering bsb for AU less than 6
+
+19: Test case for creating beneficiary entering aba for AU
+
+20: Test case for creating beneficiary entering aba for CN
+
+21: Test case for creating beneficiary entering aba for US less than 9 characters
+
+
+## Validating error messages according to the requirements 
+
+If the request failed the validation, we need to return 400 http response with proper error message, some sample messages as below:
+
+when account_number not given: "'account_number' is required"
+
+account_number length error: "Length of account_number should be between 7 and 11 when bank_country_code is 'US'"
+
+wrong swift code: "The swift code is not valid for the given bank country code: US"
+
+swift code length error: "Length of 'swift_code' should be either 8 or 11"
