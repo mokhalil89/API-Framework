@@ -1,4 +1,4 @@
-# Airwallex assignment for Quality Engineer
+# API FRAMEWORK for Quality Engineer role
 Airwallex needs an API service endpoint to create beneficiary. Here is the API reference:
 https://www.airwallex.com/docs/api#/Payouts/Beneficiaries/_api_v1_beneficiaries_create/post
 When Creating beneficiary, there is a field for bank detail. Please design your test framework to cover this part
